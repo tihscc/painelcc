@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #292929;
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.logo {
+  font-weight: bold;
+  height: 40px;
+}
+
+.pacientes-btn {
+  background-color: #ffffff; /* Green */
+  border-radius: 5px;
+  border: none;
+  color: rgb(36, 36, 36);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.actions-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.actions-bar button {
+  padding: 8px 12px;
+  background-color: #292929;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-weight: bold;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.modal h2 {
+  margin-bottom: 15px;
+}
+
+.modal form label {
+  display: block;
+}
+
+.modal form input,
+.modal form select {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  border-color: #292929;
+}
+
+.modal-buttons button {
+  padding: 6px 12px;
+  font-weight: bold;
+}
+
+.modal-container {
+  font-family: "Open Sans", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+  display: none;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  gap: 15px;
+}
+.modal h1{
+  font-size: 25px;
+}
+.modal label {
+  font-size: 15px;
+  width: 100%;
+}
+.modal input {
+  width: 100%;
+  font-size: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.219);
+  padding: 5px;
+}
+.modal select{
+  width: 100%;
+  font-size: 17px;
+  border: 1px solid rgba(0, 0, 0, 0.219);
+  padding: 5px;
+}
+.modal select option{
+  font-size: 15px;
+}
+.modal .btnModal{
+  display: flex;
+  justify-content: space-around;
+  width: auto;
+}
+
+#btnSalvar{
+  background-color: #292929;
+  color: white;
+  transition-duration: 0.4s;
+}
+#btnFechar{
+  background-color: #292929;
+  color: white;
+  transition-duration: 0.4s;
+}
+#btnSalvar:hover{
+  background-color: #4d4d4d; /* Green */
+  color: white;
+
+}
+#btnFechar:hover{
+  background-color: #4d4d4d; /* Green */
+  color: white;
+}
+
+.modal button {
+  width: 200px;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--color-2);
+  border-color: var(--border-color-buttons);
+  color: var(--color-dark);
+  border: 1px solid transparent;
+  padding: 5px;
+  font-size: 15px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: modal .4s;
+}
+@keyframes modal {
+from {
+  opacity: 0;
+  transform: translate3d(0, -60px, 0);
+}
+to {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+}
+
+td button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+td button i {
+  font-size: 25px;
+}
+
+td button i:first-child {
+  margin-right: 10px;
+}
+.acao{
+  cursor: pointer;
+}
